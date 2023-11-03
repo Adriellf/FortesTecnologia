@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/11/02 12:32:18.787.dfm,C:\ADriel\teste\uMenu.dfm=C:\Users\Adriel.Santos\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2023/11/02 12:32:18.787.pas,C:\ADriel\teste\uMenu.pas=C:\Users\Adriel.Santos\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/11/02 12:32:39.632.dproj,C:\ADriel\teste\Projeto_Abastecimento.dproj=C:\Users\Adriel.Santos\Documents\RAD Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2023/11/02 12:37:14.392.dfm,C:\ADriel\teste\uAbastecimento.dfm=C:\ADriel\teste\Unit1.dfm</Transaction>
+    <Transaction>2023/11/02 12:37:14.392.pas,C:\ADriel\teste\uAbastecimento.pas=C:\ADriel\teste\Unit1.pas</Transaction>
+    <Transaction>2023/11/02 16:21:24.381.pas,C:\ADriel\teste\uFuncoes_Genericas.pas=C:\ADriel\teste\Unit1.pas</Transaction>
+    <Transaction>2023/11/02 18:09:19.000.856,=C:\teste\Unit1.pas</Transaction>
+    <Transaction>2023/11/02 18:14:27.000.237,C:\teste\uDataModule.pas=C:\teste\Unit1.pas</Transaction>
+    <Transaction>2023/11/02 18:14:27.000.237,C:\teste\uDataModule.dfm=C:\teste\Unit1.dfm</Transaction>
+    <Transaction>2023/11/02 18:28:33.000.559,=C:\teste\Unit1.pas</Transaction>
+    <Transaction>2023/11/02 18:33:26.000.756,C:\teste\uClasseGenerica.pas=C:\teste\Unit1.pas</Transaction>
+    <Transaction>2023/11/02 19:46:00.000.830,=C:\teste\Unit1.pas</Transaction>
+    <Transaction>2023/11/02 19:50:33.000.203,C:\teste\Unit1.dfm=C:\teste\uRelatorio.dfm</Transaction>
+    <Transaction>2023/11/02 19:50:33.000.203,C:\teste\Unit1.pas=C:\teste\uRelatorio.pas</Transaction>
+  </Transactions>
+</BorlandProject>

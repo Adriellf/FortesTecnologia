@@ -1,0 +1,17 @@
+program Projeto_Abastecimento;
+
+uses
+  Forms,
+  uMenu in 'uMenu.pas' {fMenu},
+  uAbastecimento in 'uAbastecimento.pas' {fAbastecimento},
+  uFuncoes_Genericas in 'uFuncoes_Genericas.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfMenu, fMenu);
+  Application.CreateForm(TfAbastecimento, fAbastecimento);
+  Application.Run;
+end.

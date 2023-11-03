@@ -1,0 +1,28 @@
+object DataModule1: TDataModule1
+  Height = 750
+  Width = 1000
+  PixelsPerInch = 120
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=C:\teste\projeto.sqlite3.txt'
+      'DriverID=SQLite')
+    Connected = True
+    LoginPrompt = False
+    Left = 576
+    Top = 160
+  end
+  object FDBombas: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      'select * from bombas')
+    Left = 304
+    Top = 280
+  end
+  object FDGenerico: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      '')
+    Left = 472
+    Top = 344
+  end
+end

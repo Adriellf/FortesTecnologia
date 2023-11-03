@@ -1,0 +1,29 @@
+unit uMenu;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Menus;
+
+type
+  TfMenu = class(TForm)
+    MainMenu1: TMainMenu;
+    C1: TMenuItem;
+    R1: TMenuItem;
+    A1: TMenuItem;
+    A2: TMenuItem;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  fMenu: TfMenu;
+
+implementation
+
+{$R *.dfm}
+
+end.

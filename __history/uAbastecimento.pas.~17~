@@ -1,0 +1,57 @@
+unit uAbastecimento;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls, ComCtrls, Mask, uDataModule;
+
+type
+  TfAbastecimento = class(TForm)
+    dtAbastecimento: TDateTimePicker;
+    label1: TLabel;
+    ComboBox1: TComboBox;
+    Label3: TLabel;
+    MaskEdit1: TMaskEdit;
+    Label4: TLabel;
+    Label5: TLabel;
+    Button1: TButton;
+    MaskEdit2: TMaskEdit;
+    procedure FormCreate(Sender: TObject);
+    procedure MaskEdit2Exit(Sender: TObject);
+    procedure MaskEdit1Exit(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  fAbastecimento: TfAbastecimento;
+
+implementation
+
+uses uFuncoes_Genericas;
+
+{$R *.dfm}
+
+procedure TfAbastecimento.FormCreate(Sender: TObject);
+begin
+  dtAbastecimento.Date := Date();
+end;
+
+
+
+procedure TfAbastecimento.MaskEdit1Exit(Sender: TObject);
+begin
+  if not empty(MaskEdit1.Text) then
+    MaskEdit1.Text:= FormatFloat('#,##0.00', StrToFloat(MaskEdit1.Text));
+end;
+
+procedure TfAbastecimento.MaskEdit2Exit(Sender: TObject);
+begin
+  if not empty(MaskEdit2.Text) then
+    MaskEdit2.Text:= FormatFloat('#,##0.00', StrToFloat(MaskEdit2.Text));
+end;
+
+end.

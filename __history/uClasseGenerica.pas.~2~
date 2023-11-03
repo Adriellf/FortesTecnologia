@@ -1,0 +1,50 @@
+unit uClasseGenerica;
+
+interface
+
+type
+
+  TGenerica = class
+  private
+    Fvalor: string;
+    Fvl_imposto: string;
+    Fbombas_id: integer;
+    Fqtd_litros: string;
+    procedure Setbombas_id(const Value: integer);
+    procedure Setvalor(const Value: string);
+    procedure Setvl_imposto(const Value: string);
+    procedure Setqtd_litros(const Value: string);
+    { private declarations }
+  public
+    property bombas_id : integer read Fbombas_id write Setbombas_id;
+    property valor : string read Fvalor write Setvalor;
+    property vl_imposto:string read Fvl_imposto write Setvl_imposto;
+    property qtd_litros : string read Fqtd_litros write Setqtd_litros;
+
+  end;
+
+implementation
+
+{ TGenerica }
+
+procedure TGenerica.Setbombas_id(const Value: integer);
+begin
+  Fbombas_id := Value;
+end;
+
+procedure TGenerica.Setqtd_litros(const Value: string);
+begin
+  Fqtd_litros := Value;
+end;
+
+procedure TGenerica.Setvalor(const Value: string);
+begin
+  Fvalor := Value;
+end;
+
+procedure TGenerica.Setvl_imposto(const Value: string);
+begin
+  Fvl_imposto := Value;
+end;
+
+end.

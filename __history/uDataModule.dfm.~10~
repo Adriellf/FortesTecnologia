@@ -1,0 +1,63 @@
+object DataModule1: TDataModule1
+  Height = 750
+  Width = 1000
+  PixelsPerInch = 120
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=C:\teste\projeto.sqlite3.txt'
+      'DriverID=SQLite')
+    Connected = True
+    LoginPrompt = False
+    Left = 576
+    Top = 160
+  end
+  object FDBombas: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      'select * from bombas')
+    Left = 304
+    Top = 280
+  end
+  object FDGenerico: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      '')
+    Left = 472
+    Top = 344
+  end
+  object FDRelatorio: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      
+        'select strftime('#39'%d/%m/%Y'#39', data) as data, bombas.nome as bombas' +
+        ',tanques.nome as tanques, REPLACE(ROUND(CAST(valor AS REAL) * (1' +
+        ' + CAST(vl_imposto AS REAL) / 100), 2),'#39','#39', '#39'.'#39') AS total_com_im' +
+        'posto  from vendas '
+      ' inner join bombas on bombas.id = bombas_id'
+      
+        ' inner join tanques on tanques.id = bombas.tanques_id   order by' +
+        ' data')
+    Left = 480
+    Top = 448
+    object FDRelatoriodata: TWideStringField
+      FieldName = 'data'
+      Origin = 'data'
+      Size = 32767
+    end
+    object FDRelatoriobombas: TWideMemoField
+      FieldName = 'bombas'
+      Origin = 'bombas'
+      BlobType = ftWideMemo
+    end
+    object FDRelatoriotanques: TWideMemoField
+      FieldName = 'tanques'
+      Origin = 'tanques'
+      BlobType = ftWideMemo
+    end
+    object FDRelatoriototal_com_imposto: TWideStringField
+      FieldName = 'total_com_imposto'
+      Origin = 'total_com_imposto'
+      Size = 32767
+    end
+  end
+end
